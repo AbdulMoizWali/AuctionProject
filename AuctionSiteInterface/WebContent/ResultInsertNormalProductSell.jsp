@@ -11,7 +11,7 @@
 <h1>View</h1>
 
 <%
-    String userID = "1";
+    String userID = session.getAttribute("userID").toString();
 	String productName = request.getParameter("ProductSellName");
 	String productDescription = request.getParameter("ProductSellDescription");
 	String category = request.getParameter("ProductCategory"); 

@@ -8,8 +8,8 @@
 package main;
 
 public interface NormalProductSell extends java.rmi.Remote {
-    public java.lang.String getNormalSellingProducts() throws java.rmi.RemoteException;
-    public boolean updateNormalSellingtoSold(java.lang.String normalSellingProductID) throws java.rmi.RemoteException;
     public void insertNormalSellingWithProduct(java.lang.String userID, java.lang.String title, java.lang.String description, java.lang.String category, java.lang.String location, java.lang.String price) throws java.rmi.RemoteException;
+    public boolean updateNormalSellingtoSold(java.lang.String normalSellingProductID) throws java.rmi.RemoteException;
+    public java.lang.String getNormalSellingProducts() throws java.rmi.RemoteException;
     public void insertNormalSelling(java.lang.String productID, java.lang.String price) throws java.rmi.RemoteException;
 }

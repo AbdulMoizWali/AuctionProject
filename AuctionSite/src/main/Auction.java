@@ -78,7 +78,7 @@ public class Auction {
 		} 
 		Date End = addHoursToJavaUtilDate(Start, 24);
 		String EndDate = formatter.format(End);
-		String query = "INSERT INTO `auctioned product` (`ProductID`, `Start`, `Ended`, `minBidPrice`, `Approval`) VALUES ('" + ProductID + "', '" + StartDate + "', '" + EndDate + "', '" + MinBidPrice + "', 'False' )";
+		String query = "INSERT INTO `auctioned product` (`ProductID`, `Start`, `Ended`, `minBidPrice`, `Approval`) VALUES ('" + ProductID + "', '" + StartDate + "', '" + EndDate + "', '" + MinBidPrice + "', 'false' )";
 		
 		try{
 			Class.forName("com.mysql.jdbc.Driver");

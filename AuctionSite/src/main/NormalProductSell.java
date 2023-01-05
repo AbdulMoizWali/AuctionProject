@@ -35,7 +35,7 @@ public class NormalProductSell {
 		Date date = new Date();
 		String uploaddate = formatter.format(date);
 		String query = null;
-		query = "INSERT INTO `normal sell product` (`SellingID`, `ProductID`, `UploadDate`, `PurchasedDate`, `price`, `Status`) " + "VALUES (NULL, '" + ProductID + "', '"+ uploaddate +"', NULL, '" + Price + "', 'Available');";
+		query = "INSERT INTO `normal sell product` (`SellingID`, `ProductID`, `UploadDate`, `price`, `Status`) " + "VALUES (NULL, '" + ProductID + "', '"+ uploaddate +"', '" + Price + "', 'Available');";
 
 		
 		try{
@@ -65,7 +65,7 @@ public class NormalProductSell {
 		boolean result = false;
 		String Updatequery = null;
 		
-		Updatequery = "UPDATE `normal sell product` SET `PurchasedDate` = '" + purchasedDate + "', `Status` = 'Sold' WHERE `normal sell product`.`SellingID` = " + normalSellingProductID + ";";
+		Updatequery = "UPDATE `normal sell product` SET `Status` = 'Sold' WHERE `normal sell product`.`SellingID` = " + normalSellingProductID + ";";
 		
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
@@ -103,10 +103,9 @@ public class NormalProductSell {
 			result += 
 					" SellingID: " + rs.getInt(1) +     
 					" ProductID: " + rs.getInt(2) +
-					" UploadDate: " + rs.getString(3) + 
-					" PurchasedDate: " + rs.getString(4) + 
-					" Price: " + rs.getInt(5) + 
-					" Status: " + rs.getString(6) + "\n"
+					" UploadDate: " + rs.getDate(3).toString() + 
+					" Price: " + rs.getInt(4) + 
+					" Status: " + rs.getString(5) + "\n"
 					;
 			}
 			System.out.println(result);

@@ -44,10 +44,10 @@ public class NormalProductSellProxy implements main.NormalProductSell {
     return normalProductSell;
   }
   
-  public java.lang.String getNormalSellingProducts() throws java.rmi.RemoteException{
+  public void insertNormalSellingWithProduct(java.lang.String userID, java.lang.String title, java.lang.String description, java.lang.String category, java.lang.String location, java.lang.String price) throws java.rmi.RemoteException{
     if (normalProductSell == null)
       _initNormalProductSellProxy();
-    return normalProductSell.getNormalSellingProducts();
+    normalProductSell.insertNormalSellingWithProduct(userID, title, description, category, location, price);
   }
   
   public boolean updateNormalSellingtoSold(java.lang.String normalSellingProductID) throws java.rmi.RemoteException{
@@ -56,10 +56,10 @@ public class NormalProductSellProxy implements main.NormalProductSell {
     return normalProductSell.updateNormalSellingtoSold(normalSellingProductID);
   }
   
-  public void insertNormalSellingWithProduct(java.lang.String userID, java.lang.String title, java.lang.String description, java.lang.String category, java.lang.String location, java.lang.String price) throws java.rmi.RemoteException{
+  public java.lang.String getNormalSellingProducts() throws java.rmi.RemoteException{
     if (normalProductSell == null)
       _initNormalProductSellProxy();
-    normalProductSell.insertNormalSellingWithProduct(userID, title, description, category, location, price);
+    return normalProductSell.getNormalSellingProducts();
   }
   
   public void insertNormalSelling(java.lang.String productID, java.lang.String price) throws java.rmi.RemoteException{

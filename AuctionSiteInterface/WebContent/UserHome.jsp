@@ -24,7 +24,7 @@
 <title>Home</title>
 </head>
 <body>
-<a href=""><button>Sell</button></a>
+<a href="Sell.jsp"><button>Sell</button></a>
 <a href=""><button>Buy</button></a>
 <a href="Userprofile.jsp"><button>Update</button></a>
 </body>
