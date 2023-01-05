@@ -25,7 +25,7 @@
 </head>
 <body>
 <a href="Sell.jsp"><button>Sell</button></a>
-<a href=""><button>Buy</button></a>
+<a href="Buy.jsp"><button>Buy</button></a>
 <a href="Userprofile.jsp"><button>Update</button></a>
 </body>
 </html>

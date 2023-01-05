@@ -8,10 +8,7 @@
 </head>
 <body>
 	<h1>Buy Product</h1>
-	<h2>Choose any one:</h2>
-	<a href="InsertAuction.jsp"><button>Start an Auction</button></a>
+	<a href="BidAuction.jsp"><button>Bid Auction</button></a>
 	<br>
-	<br>
-	<a href="InsertNormalProductSell.jsp"><button>Sell Product Directly</button></a>
 </body>
 </html>
