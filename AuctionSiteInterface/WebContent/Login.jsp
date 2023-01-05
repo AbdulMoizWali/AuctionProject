@@ -7,7 +7,7 @@
 <title>Auction Site</title>
 </head>
 <body>
-<h1>Login User</h1>
+<h1>Login</h1>
 
 <form action="UserHome.jsp">
 <br>
