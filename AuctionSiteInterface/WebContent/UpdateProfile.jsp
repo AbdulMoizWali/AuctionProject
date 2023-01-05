@@ -12,9 +12,9 @@
 User u1= new UserProxy().getUser();
 String userid, updateusername, updatepassword, updateFname, updateLname, updatePhone, updateaddress, updatebalance, updatecnic, username, password;
 
-username=session.getAttribute("username").toString();
-password=session.getAttribute("password").toString();
-userid= u1.getloginID(username, password);
+/* username=session.getAttribute("username").toString();
+password=session.getAttribute("password").toString(); */
+userid= session.getAttribute("userID").toString();
 
 updateusername=request.getParameter("updateusername");
 updatepassword=request.getParameter("updatepassword");
@@ -28,10 +28,10 @@ updatecnic=request.getParameter("updatecnic");
 u1.updateUserdata(userid, updateusername, updatepassword, updateFname, updateLname, updatePhone, updateaddress, updatebalance, updatecnic);
 %>
 <form action="Login.jsp">
-<%
+<%-- <%
 session.setAttribute("username", username);
 session.setAttribute("password", password);
-%>
+%> --%>
 <label>Click to return to login</label>
 <br>
 <br>

@@ -12,16 +12,12 @@
 <h1>User Profile</h1>
 <%
 User u1 = new UserProxy().getUser();
-String username, password;
-username=request.getParameter("username");
-password=request.getParameter("password");
-out.println(u1.getUserData(u1.getloginID(username, password)));
+String UserID = "";
+UserID = session.getAttribute("userID").toString();
+out.println(u1.getUserData(session.getAttribute("userID").toString()));
+//session.setAttribute("userID", UserID);
 %>
 <form action="UpdateProfile.jsp">
-<%
-session.setAttribute("username", username);
-session.setAttribute("password", password);
-%>
 <br>
 <br>
 <label >Username</label>

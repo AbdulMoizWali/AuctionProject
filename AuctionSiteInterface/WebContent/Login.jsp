@@ -9,7 +9,7 @@
 <body>
 <h1>Login User</h1>
 
-<form action="Userprofile.jsp">
+<form action="UserHome.jsp">
 <br>
 <label>Username</label>
 <input name="username" type="text"></input>

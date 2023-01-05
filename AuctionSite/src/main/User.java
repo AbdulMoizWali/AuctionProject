@@ -33,7 +33,7 @@ public class User {
 			Connection con =
 			DriverManager.getConnection("jdbc:mysql://localhost:3306/auctionsite","root","");
 			Statement stmt=con.createStatement();
-			ResultSet rs=stmt.executeQuery("SELECT `Username`, `Password`, `First_Name`, `Last_Name`, `phone`, `Address`, `Balance`, `Verification_status`, `CNIC` FROM `user` WHERE UserID = '"+ UserID +"'");
+			ResultSet rs=stmt.executeQuery("SELECT `Username`, `Password`, `First_Name`, `Last_Name`, `phone`, `Address`, `Balance`, `CNIC` FROM `user` WHERE UserID = '"+ UserID +"'");
 			rs.next();
 			result =  
 					" Username: " + rs.getString(1) + 
@@ -43,8 +43,7 @@ public class User {
 					" \n\n phone: " + rs.getString(5) +
 					" \n\n Address: " + rs.getString(6) +
 					" \n\n Balance: " + rs.getString(7) +
-					" \n\n Account Verfication: " + rs.getString(8) +
-					" \n\n CNIC: " + rs.getString(9)
+					" \n\n CNIC: " + rs.getString(8)
 					;
 //			System.out.println(result);
 			con.close();
